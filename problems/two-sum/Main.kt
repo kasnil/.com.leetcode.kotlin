@@ -1,6 +1,6 @@
-package com.github.kasnil.leetcode.problems.two_sum
+package com.github.kasnil.leetcode.problems.twosum
 
-/** 
+/**
  * https://leetcode.com/problems/two-sum/
  */
 fun main() {
@@ -12,9 +12,12 @@ fun main() {
 }
 
 class Solution {
-    fun twoSum(nums: IntArray, target: Int): IntArray {
+    fun twoSum(
+        nums: IntArray,
+        target: Int,
+    ): IntArray {
         val map = mutableMapOf<Int, Int>()
-        nums.forEachIndexed { index, num -> 
+        nums.forEachIndexed { index, num ->
             if (map.containsKey(target - num)) {
                 return intArrayOf(map.getValue(target - num), index)
             }
